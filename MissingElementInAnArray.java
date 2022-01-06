@@ -4,13 +4,16 @@ import java.util.Arrays;
 
 public class MissingElementInAnArray {
 	public static void main(String[] args) {
-		int[] arr = {1,2,3,4,7,6,8};
+		int[] arr = {5,6,7,8,9,11,12};
 		Arrays.sort(arr);
-		for(int i=0;i<arr.length;i++) {
-			if(arr[i]==(i+1)) {
+		int l = arr.length;
+		int firstnum = arr[0];
+		System.out.println(firstnum);
+		for(int i=0;i<l;i++) {
+			if(arr[i]==(firstnum+i)) {
 				continue;
 			}else {
-				System.out.println("Missing Element in an array is : " +(i+1));
+				System.out.println("Missing Element of an array : " +(firstnum+i));
 				break;
 			}
 			
